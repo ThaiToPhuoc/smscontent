@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/LuachonFragment">
+
+    <fragment
+        android:id="@+id/LuachonFragment"
+        android:name="vn.edu.ntu.phuocthai.danhbabasic.LuachonFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_luachon">
+
+        <action
+            android:id="@+id/action_LuachonFragment_to_SMSFragment"
+            app:destination="@id/SMSFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SMSFragment"
+        android:name="vn.edu.ntu.phuocthai.danhbabasic.SMSFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_sms">
+
+        <action
+            android:id="@+id/action_SMSFragment_to_LuachonFragment"
+            app:destination="@id/LuachonFragment" />
+    </fragment>
+</navigation>
